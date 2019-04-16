@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Konrad Pietkiewicz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <script src="js.js"></script>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a class="me" href="#">O mnie</a></li>
+            <li><a class="education" href="#">Wykształcenie</a></li>
+            <li><a class="hobby" href="#">Zainteresowania</a></li>
+            <li><a class="offer" href="#">Oferta</a></li>
+        </ul>
+    </nav>
+    <header></header> 
+        
+    <h1>Witaj na mojeje stronie!</h1>
+
+    <section data-section= "me" id= "me">
+        <article class="art1 clearfix">
+            <h2>O mnie</h2>
+            <img src="icons/boy.png">
+            <p> Nazywam się Konrad Pietkiewicz. Mam 22 lata. Strona została stworzona przede wszystkim dla osób, które chciałby nawiązać ze mną 
+                współpracę. 
+            </p>
+        </article>
+    </section>
+   
+    <section data-section= "education" id= "education">
+        <article class="art2 clearfix">
+            <h2>Wykształcenie</h2>
+            <img src="icons/agreement.png">
+            <p> Ukończyłem technikum informatyczne. Obecnie studiuje informatyke (specjalizacja programowanie). Biorę udział w kursie Frond-end developer
+                (html, css, javascript, react, podstawy backendu oraz efekty css i javascript).
+            </p>
+        </article>
+    </section>
+    
+    <section data-section="hobby" id="hobby">
+        <article class="art3 clearfix">
+            <h2>Zainteresowania</h2>
+            <img src="icons/internet-connection.png">
+            <p> Posiadam wiele zainteresowań. Głównym moim zainteresowaniem są nowe technologie. Lubię też sport, głółwnie piłkę nożną. 
+                Często jeżdżę na rowerze.</p>
+        </article>
+    </section>
+    
+    <section data-section="offer" id="offer" >
+        <article class="art4 clearfix">
+            <h2>Oferta</h2>
+            <img src="icons/technical-support.png">
+            <p>Tworze strony internetowe oparte o html, css, javascript. Strony także tworzone na urządzenia mobilne (responsywne). Jestem otwarty 
+               na ciekawe propozycje. </p>
+        </article>
+    <section class="contact">
+            <h3>Chciał-byś/abyś posiadać własną stronę www? Skontaktuj się ze mną!</h3>
+    <section class="socials">
+            <div class="fb message"> <a href="https://www.facebook.com/"><img src="icons/facebook.png" alt="kontakt"></a><p> Konrad Pietkiewicz </p></div>
+            <div class="gm message"><a href="https://www.google.com/intl/pl/gmail/about/"><img src="icons/gmail.png" alt="kontakt"></a><p>konradpietkiewicz20@gmail.com</p></div>
+     </section>
+     </section>
+     
+        
+        <footer>
+            <p>&copy; 2018 - Konrad Pietkiewicz</p>
+        </footer>
+        
+        <script src="jquery-3.3.1.min.js"></script>
+    <script>
+       $('nav a').on('click', function () {
+        const goToSection = "[data-section=" + $(this).attr('class') + "]";
+         $('body, html').animate({
+          scrollTop: $(goToSection).offset().top
+         })
+        })
+    </script>
+</body>
+</html>

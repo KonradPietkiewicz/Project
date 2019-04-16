@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+html {
+    font-family: 'Oswald', sans-serif;
+}
+
+/*Nawigacja*/
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    opacity: 0.8;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    flex-basis: 100%;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: #444;
+    font-size: 22px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+li a:hover {
+    text-decoration: underline;
+    text-decoration-color: #34f1ffec;
+}
+
+@media (max-width: 1024px) {
+    ul {
+        flex-direction: column;
+    }
+}
+ 
+/*Zdjęcie*/
+header {
+    height: 80vh;
+    background-image: url("img/wspinaczka.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+/*Artykuły*/
+article h2 {
+    background-color: rgb(37, 114, 37);
+    padding: 10px 0 10px 10vh;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: white;
+}
+
+article img {
+    float: left;
+    padding: 0 30px;
+    margin-bottom: 20px;
+}
+
+article p {
+    font-size: 22px;
+    padding-right: 40px;
+    line-height: 2;
+    
+   }
+
+/*Kontakt*/
+.contact {
+    background-color: black;
+    overflow: hidden;
+}
+.contact h3 {
+    padding: 10px;
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+}
+
+/*@media (max-width: 500px) {
+.contact h3 {
+    text-align: center;
+}
+}*/
+ 
+.socials {
+    display: flex;
+    padding: 10px 40px;
+    max-width: 1248px;
+    margin: 0 auto;
+}
+
+.socials>* {
+   flex-basis: 100%;
+   flex-grow: 1;
+   padding: 50px;
+   padding-left: 100px;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.message>* {
+   padding: 10px 5px;
+   text-align: left;
+   flex-basis: 25%;
+}
+
+.message>p {
+    color: white;
+    flex-basis: 70%;
+}
+
+.message a img {
+    transition: .2s;
+}
+
+.message  a:hover img {
+    transform: scale(1.6);
+}
+
+
+@media (max-width: 1190px) {
+    .socials {
+        flex-wrap: wrap;
+    }
+    .socials>* {
+        flex-basis: 100%;
+        flex-grow: 0;
+        padding-left: 200px;
+
+    }
+    .message>* {
+        align-self: center;
+        flex-basis: auto;
+    }
+    .message p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 690px) {
+    .socials>* {
+        padding-left: 0;
+    }
+}
+
+/*Stopka*/
+footer {
+    background-color: #29a6dc;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
